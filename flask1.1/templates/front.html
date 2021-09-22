@@ -1,0 +1,182 @@
+{% extends 'base1.html'%}
+{% block title%}Qutoes{% endblock title%}
+{% block body%}
+
+	<div class="under1">
+	<div class="p1">
+	<p>Hey welcome to my page hope, you'll fine and stay good  :)</p></div>
+	<p class='p2'>Here you can watch movies , write your qutoes on qutoes section  </p>
+
+	<div class="pacman">
+		<div class="pacman_eyes"></div>
+			<div class="pacman_mouth"></div>
+			<div class="pacman_food"></div>
+	</div>
+	<div class="p3"><p>Don't worry you don't have to login or sign in  ;) </p></div>
+	</div>
+	<style>
+		body{
+			background-color:black;
+			position:relative;
+			}
+			.under1{
+			padding:50%;
+			background-color:#00FFFF;
+			}
+			.b1{
+			border-radius:20px 20px;
+			left:50px;
+			background-color:#5298BC;
+			}
+		.p1{
+		
+			position:absolute;
+			font-size:15px;
+			font-family:"Brush Script MT", cursive;
+			animation-name:anim;
+			right:30%;
+			top:20%;
+			font-size-adjust: auto;
+			animation:anim 4s linear infinite;
+			}
+		.p2{
+		
+			position:absolute;
+			font-family:"Brush Script MT", cursive;
+			animation-name:anim;
+			font-size-adjust: auto;
+			top:40%;
+			left:50px;
+			}
+		@keyframes anim{
+			0%{
+			color:red;
+			}
+			30%{
+			color:blue;
+			}
+			50%{
+			color:yellow;
+			}
+			80%{
+			color:black;
+			}
+		}
+		::selection{
+			color:black;
+			background:red;
+		}
+		.pacman{
+			width:100px;
+			height:100px;
+			border-radius:50%;
+			background:yellow;
+			position:absolute;
+			margin-top:20px;
+			Animation:move 2s infinite;
+
+		}
+		.pacman_eyes{
+			position:absolute;
+			width:10px;
+			height:10px;
+			border-radius:50%;
+			top:20px;
+			right:40px;
+			background:#333333;
+		
+		}
+		.pacman_mouth{
+			background:#00FFFF;
+			position:absolute;
+			width:100%;
+			height:100%;
+			clip-path:polygon(100% 74%,44% 48%,100% 21%);
+			animation-name: eat;
+			animation-duration: 0.7s;
+			animation-iteration-count: infinite;
+		
+		}
+		.pacman_food{
+			position:absolute;
+			width:16px;
+			height:16px;
+			background:#fff;
+			border-radius:50%;
+			top:40%;
+			left:200px;
+			Animation:food 0.7s infinite;
+		}
+		@keyframes eat{
+			0%{
+			clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+			}
+		   25%{
+			clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+			}
+		  50%{
+			clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+			}
+		  75%{
+			clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+			}
+		  100% {
+			clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+			}
+		}
+		@keyframes food{
+			0%{
+				transform:translateX(0);
+				opacity:1;
+			}
+			100%{
+				transform:translateX(-150px);
+				opacity:0;
+			}
+			
+		}
+		@keyframes move{
+		
+			0%{
+			transform:translateX(20px);
+			opacity:1;	
+			}
+			100%{
+			transform:translateX(150px);
+			opacity:1;
+			}
+			}
+			.p3{
+			font-size:20px;
+			position:absolute;
+			top:80%;
+			font-size-adjust: auto;
+			}
+			@keyframes moove{
+			10%{
+			letter-spacing:5px;
+			color:blue;
+			}
+			20%{
+			letter-spacing:4px;
+			color:yellow;
+
+			}
+			40%{
+			letter-spacing:3px;
+			color:red;
+			}
+			60%{
+			letter-spacing:2px;
+			color:#5298BC;
+			}
+			90%{
+			letter-spacing:1px;
+			color:#A38A00;
+			}
+		}
+	</style>
+
+
+
+{% endblock body%}
